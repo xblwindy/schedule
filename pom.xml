@@ -12,12 +12,12 @@
      <docker.image.prefix>springboot</docker.image.prefix>
   </properties>
    <!-- spring-boot-starter-parent包含了大量配置好的依赖管理，在自己项目添加这些依赖的时候不需要写<version>版本号 -->
-  <parent>
-	    <groupId>org.springframework.boot</groupId>
-	    <artifactId>spring-boot-starter-parent</artifactId>
-	    <version>1.5.2.RELEASE</version>
-	    <relativePath/>
-  </parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
   <dependencies>
         <!-- 实现web功能 -->
 		<dependency>
@@ -75,7 +75,15 @@
             <groupId>io.springfox</groupId>  
             <artifactId>springfox-swagger-ui</artifactId>  
             <version>2.7.0</version>  
-        </dependency>  
+        </dependency>
+
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.16.20</version>
+          <scope>provided</scope>
+      </dependency>
+
   </dependencies>
   <build>
         <finalName>spring-boot-quartz</finalName>
